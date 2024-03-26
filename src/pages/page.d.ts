@@ -1,5 +1,3 @@
-declare interface IDashboardPageProps {
-}
+declare interface IDashboardPageProps {}
 
-declare interface ILoginPageProps {
-}
+declare interface ILoginPageProps {}

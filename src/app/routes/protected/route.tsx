@@ -1,15 +1,15 @@
-import {RouteObject} from 'react-router-dom';
-import {DashboardPage} from "pages";
-import {pageRoutes} from "app/constants/page-routes";
-import DashboardLayout from "app/routes/layouts/dashboard-layout.tsx";
+import { RouteObject } from 'react-router-dom';
+import { pageRoutes } from 'app/constants/page-routes';
+import DashboardLayout from 'app/routes/layouts/dashboard-layout';
+import { DashboardPage } from 'pages';
 
 export const protectedRoutes: RouteObject = {
     path: pageRoutes.DASHBOARD,
-    element: <DashboardLayout/>,
+    element: <DashboardLayout />,
     children: [
         {
             index: true,
-            element: <DashboardPage/>,
-        }
+            element: <DashboardPage />,
+        },
     ],
 };

@@ -1,3 +1,3 @@
 export default {
-  LOGIN: "Lorem ipsum"
+    LOGIN: 'Lorem ipsum',
 };

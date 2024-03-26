@@ -1,5 +1,5 @@
-import {FC} from 'react';
-import {isRouteErrorResponse, useNavigate, useRouteError} from 'react-router-dom';
+import { FC } from 'react';
+import { isRouteErrorResponse, useNavigate, useRouteError } from 'react-router-dom';
 
 const ErrorPage: FC = () => {
     const error = useRouteError();
@@ -7,12 +7,7 @@ const ErrorPage: FC = () => {
 
     if (isRouteErrorResponse(error)) {
         if (error.status === 404) {
-            return (
-                <button
-                    onClick={() => navigate('/')}>
-                    Home
-                </button>
-            );
+            return <button onClick={() => navigate('/')}>Home</button>;
         }
     }
 

@@ -1,4 +1,4 @@
 export const pageRoutes = {
-  HOME: '/',
-  DASHBOARD: '/dashboard',
+    HOME: '/',
+    DASHBOARD: '/dashboard',
 };

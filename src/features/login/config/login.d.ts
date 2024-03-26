@@ -1,10 +1,8 @@
-declare interface ILoginSliceProps {
-}
+declare interface ILoginSliceProps {}
 
-declare interface ILoginFormProps {
-}
+declare interface ILoginFormProps {}
 
 declare interface ILoginModel {
-    accessToken: string,
-    isAuthenticated: boolean,
+    accessToken: string;
+    isAuthenticated: boolean;
 }

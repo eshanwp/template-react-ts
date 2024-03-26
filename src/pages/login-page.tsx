@@ -1,14 +1,22 @@
-import {FC} from 'react';
+import { FC } from 'react';
 
 /**
  *
  */
 const LoginPage: FC<ILoginPageProps> = () => {
-    return (
-        <div>
-            LoginPage
-        </div>
-    );
+    /**
+     * @author Eshan Priyadarshana <eshan@regovtech.com>
+     * @createdDate 2024-03-26 13:39
+     * @developmentTeam myBID
+     * @description
+     */
+    const sample = () => {
+        const a = 'hello';
+        console.log(`Hi ${a}`);
+    };
+
+    sample();
+    return <div>LoginPage</div>;
 };
 
 export default LoginPage;

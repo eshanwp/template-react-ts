@@ -10,6 +10,7 @@ This template provides a minimal setup to get React working in Vite and some ESL
 ## Running the Project
 
 To run the project in a local development environment, use the following command:
+
 ```shell
 npm run dev
 ```
@@ -37,6 +38,6 @@ coinstore-dashboard-fe/
 │   │   │   ├── model/            # Business logic (store, actions, effects, reducers, etc.)
 │   ├── pages/                    # compositional layer to construct full pages from entities, features and widgets.
 │   ├── shared/                   # reusable functionality, detached from the specifics of the project/business. (e.g. hooks, redux, utilities)
-│   ├── widgets/                  # compositional layer to combine entities and features into meaningful blocks. (e.g. IssuesList, UserProfile) 
+│   ├── widgets/                  # compositional layer to combine entities and features into meaningful blocks. (e.g. IssuesList, UserProfile)
 └── README.md                     # Project README file.
 ```

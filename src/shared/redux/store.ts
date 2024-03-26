@@ -1,7 +1,7 @@
-import {init, RematchDispatch, RematchRootState} from '@rematch/core';
-import persistPlugin, {getPersistor} from '@rematch/persist';
+import { init, RematchDispatch, RematchRootState } from '@rematch/core';
+import persistPlugin, { getPersistor } from '@rematch/persist';
 import storage from 'redux-persist/lib/storage';
-import {models, RootModel} from './models';
+import { models, RootModel } from './models';
 
 const persistConfig = {
     key: import.meta.env.VITE_STORE_NAME, // The key used to store the persisted state.

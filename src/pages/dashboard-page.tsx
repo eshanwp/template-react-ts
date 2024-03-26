@@ -1,14 +1,10 @@
-import {FC} from 'react';
+import { FC } from 'react';
 
 /**
  *
  */
 const DashboardPage: FC<IDashboardPageProps> = () => {
-    return (
-        <div>
-            DashboardPage
-        </div>
-    );
+    return <div>DashboardPage</div>;
 };
 
 export default DashboardPage;

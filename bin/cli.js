@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { execSync } from "child_process";
+import { execSync } from 'child_process';
 
-const runCommand = command => {
+const runCommand = (command) => {
     try {
         execSync(command, { stdio: 'inherit' });
         return true;
@@ -10,12 +10,12 @@ const runCommand = command => {
         console.error(`Error message: ${error.message}`);
         return false;
     }
-}
+};
 
 const main = () => {
     const repoName = process.argv[2];
     if (!repoName) {
-        console.error("Please provide a repository name as an argument.");
+        console.error('Please provide a repository name as an argument.');
         process.exit(1);
     }
 
@@ -35,6 +35,6 @@ const main = () => {
     }
 
     console.log(`Project setup for ${repoName} completed successfully.`);
-}
+};
 
 main();

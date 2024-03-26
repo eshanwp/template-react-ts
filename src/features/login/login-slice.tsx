@@ -1,6 +1,6 @@
-import {FC} from 'react';
-import LoginForm from "features/login/components/login-form";
-import textLocalization from "text-localization";
+import { FC } from 'react';
+import LoginForm from 'features/login/components/login-form';
+import textLocalization from 'text-localization';
 
 /**
  *
@@ -10,7 +10,7 @@ const LoginSlice: FC<ILoginSliceProps> = () => {
         <div className="login-slice-wrapper">
             LoginSlice
             {textLocalization.LOGIN}
-            <LoginForm/>
+            <LoginForm />
         </div>
     );
 };

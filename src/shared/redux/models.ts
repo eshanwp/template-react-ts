@@ -1,5 +1,5 @@
-import {Models} from '@rematch/core';
-import {loginModel} from "features/login/model/login-model";
+import { Models } from '@rematch/core';
+import { loginModel } from 'features/login/model/login-model';
 
 /**
  * @author Eshan Priyadarshana <eshanwp@gmail.com>

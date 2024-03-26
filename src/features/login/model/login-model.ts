@@ -1,5 +1,5 @@
-import {createModel} from '@rematch/core';
-import {RootModel} from "shared/redux/models";
+import { createModel } from '@rematch/core';
+import { RootModel } from 'shared/redux/models';
 
 export const loginModel = createModel<RootModel>()({
     state: {
