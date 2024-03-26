@@ -1,7 +1,8 @@
 {
     "name": "@wpeshan/template-react-ts",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "type": "module",
+    "main": "index.js",
     "bin": {
         "create-react-ts": "./bin/cli.js"
     },
