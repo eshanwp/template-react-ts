@@ -43,25 +43,6 @@ apiInstance.interceptors.response.use(
     },
     async function (error) {
         manuallyDecrementPromiseCounter();
-
-        // Handle errors globally
-        console.error('Axios Response Error:', error);
-
-        // Optionally, we can perform specific actions based on the error status
-        if (error.response) {
-            // The request was made and the server responded with a status code
-            // that falls out of the range of 2xx
-            console.error('Response Status:', error.response.status);
-            console.error('Response Data:', error.response.data);
-        } else if (error.request) {
-            // The request was made but no response was received
-            console.error('No response received. Request:', error.request);
-        } else {
-            // Something happened in setting up the request that triggered an Error
-            console.error('Request Error:', error.message);
-        }
-
-        // We can choose to rethrow the error or handle it as needed
         return Promise.reject(error);
     },
 );

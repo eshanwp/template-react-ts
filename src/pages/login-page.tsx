@@ -1,21 +1,38 @@
 import { FC } from 'react';
+import { useErrorBoundary } from 'react-error-boundary';
+import axiosInstance from 'app/axios/axios-instance';
 
 /**
  *
  */
 const LoginPage: FC<ILoginPageProps> = () => {
+    const { showBoundary } = useErrorBoundary();
+
     /**
-     * @author Eshan Priyadarshana <eshan@regovtech.com>
-     * @createdDate 2024-03-26 13:39
-     * @developmentTeam myBID
+     * @author Eshan Priyadarshana <esahnwp@gmail.com>
      * @description
      */
-    const sample = () => {
-        const a = 'hello'
-        console.log(`Hi ${a}`);
+    const api = async () => {
+        await axiosInstance.get('https://dummy.restapiexample.com/api/v1/employee');
+        // throw new Error('Error');
     };
 
-    return <div>LoginPage</div>;
+    return (
+        <div>
+            LoginPage
+            <button
+                onClick={async () => {
+                    try {
+                        await api();
+                    } catch (error) {
+                        showBoundary(error);
+                    }
+                }}
+            >
+                Login
+            </button>
+        </div>
+    );
 };
 
 export default LoginPage;

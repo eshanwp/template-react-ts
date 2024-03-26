@@ -24,7 +24,7 @@ Here's an overview of the project's folder structure:
 Certainly! Here's how you can structure your folder view for the README.md file:
 
 ```
-coinstore-dashboard-fe/
+[project-name]/
 ├── .storybook/                   # This folder houses the configuration files for Storybook.
 ├── src/
 │   ├── app/                      # app-wide settings, styles and providers.
