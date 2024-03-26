@@ -16,6 +16,7 @@ const LoginPage: FC<ILoginPageProps> = () => {
     };
 
     sample();
+
     return <div>LoginPage</div>;
 };
 
