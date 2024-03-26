@@ -12,7 +12,7 @@ const LoginPage: FC<ILoginPageProps> = () => {
      */
     const sample = () => {
         const a = 'hello'
-        console.log(`Hi ${a}`);
+        console.log(`Hi ${a}`)
     };
 
     return <div>LoginPage</div>;
