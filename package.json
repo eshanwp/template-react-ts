@@ -1,6 +1,6 @@
 {
   "name": "@wpeshan/template-react-ts",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "type": "module",
   "bin": "./bin/cli.js",
   "scripts": {

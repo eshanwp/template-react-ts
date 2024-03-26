@@ -13,10 +13,10 @@ const runCommand = command => {
 }
 
 const main = () => {
-    const repoName = import.meta.argv[2];
+    const repoName = process.argv[2];
     if (!repoName) {
         console.error("Please provide a repository name as an argument.");
-        import.meta.exit(1);
+        process.exit(1);
     }
 
     const gitCheckoutCommand = `git clone --depth 1 https://github.com/eshanwp/template-react-ts ${repoName}`;
@@ -25,13 +25,13 @@ const main = () => {
     console.log(`Cloning the repository: https://github.com/eshanwp/template-react-ts into folder: ${repoName}`);
     if (!runCommand(gitCheckoutCommand)) {
         console.error(`Cloning repository ${repoName} failed.`);
-        import.meta.exit(1);
+        process.exit(1);
     }
 
     console.log(`Installing dependencies for ${repoName}...`);
     if (!runCommand(installDepsCommand)) {
         console.error(`Installation of dependencies for ${repoName} failed.`);
-        import.meta.exit(1);
+        process.exit(1);
     }
 
     console.log(`Project setup for ${repoName} completed successfully.`);
