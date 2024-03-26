@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { pageRoutes } from 'app/constants/page-routes';
+import ReactOutlet from 'app/routes/layouts/react-outlet';
 import { useAppSelector } from 'shared/hooks/redux-hooks';
 import { RootState } from 'shared/redux/store';
 
@@ -17,7 +18,7 @@ const DashboardLayout: FC = () => {
         return <Navigate to={pageRoutes.HOME} replace />;
     }
 
-    return <Outlet />;
+    return <ReactOutlet />;
 };
 
 export default DashboardLayout;
