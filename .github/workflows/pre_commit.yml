@@ -1,6 +1,12 @@
 name: Pre-commit
 
-on: [push, pull_request]
+on:
+    push:
+        branches:
+            - main # Adjust branch name as needed
+    pull_request:
+        branches:
+            - main # Adjust branch name as needed
 
 jobs:
     pre_commit:
