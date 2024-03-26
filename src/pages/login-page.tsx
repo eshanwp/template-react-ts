@@ -13,8 +13,8 @@ const LoginPage: FC<ILoginPageProps> = () => {
      * @description
      */
     const api = async () => {
-        await axiosInstance.get('https://dummy.restapiexample.com/api/v1/employee/100');
-        throw new Error('Error');
+        await axiosInstance.get('https://dummy.restapiexample.com/api/v1/employee');
+        // throw new Error('Error');
     };
 
     return (
