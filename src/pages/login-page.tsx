@@ -15,6 +15,7 @@ const LoginPage: FC<ILoginPageProps> = () => {
         console.log(`Hi ${a}`);
     };
 
+    sample();
     return <div>LoginPage</div>;
 };
 
