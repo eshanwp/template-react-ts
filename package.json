@@ -1,8 +1,10 @@
 {
     "name": "@wpeshan/template-react-ts",
-    "version": "0.0.4",
+    "version": "0.0.6",
     "type": "module",
-    "bin": "./bin/cli.js",
+    "bin": {
+        "create-react-ts": "./bin/cli.js"
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
@@ -40,6 +42,7 @@
         "@typescript-eslint/eslint-plugin": "^7.1.1",
         "@typescript-eslint/parser": "^7.1.1",
         "@vitejs/plugin-react-swc": "^3.5.0",
+        "enquirer": "^2.4.1",
         "eslint": "^8.57.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.5",

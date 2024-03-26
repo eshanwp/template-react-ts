@@ -1,40 +1,50 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process';
 
-const runCommand = (command) => {
-    try {
-        execSync(command, { stdio: 'inherit' });
-        return true;
-    } catch (error) {
-        console.error(`Failed to execute command: ${command}`);
-        console.error(`Error message: ${error.message}`);
-        return false;
-    }
-};
+const { prompt } = require('enquirer');
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-const main = () => {
-    const repoName = process.argv[2];
-    if (!repoName) {
-        console.error('Please provide a repository name as an argument.');
-        process.exit(1);
-    }
+async function scaffoldProject() {
+    console.log('Need to install the following packages:');
+    // List required packages here
 
-    const gitCheckoutCommand = `git clone --depth 1 https://github.com/eshanwp/template-react-ts ${repoName}`;
-    const installDepsCommand = `cd ${repoName} && npm install`;
+    const response = await prompt({
+        type: 'confirm',
+        name: 'confirmed',
+        message: 'Ok to proceed?',
+        initial: true,
+    });
 
-    console.log(`Cloning the repository: https://github.com/eshanwp/template-react-ts into folder: ${repoName}`);
-    if (!runCommand(gitCheckoutCommand)) {
-        console.error(`Cloning repository ${repoName} failed.`);
-        process.exit(1);
+    if (!response.confirmed) {
+        console.log('Aborted.');
+        return;
     }
 
-    console.log(`Installing dependencies for ${repoName}...`);
-    if (!runCommand(installDepsCommand)) {
-        console.error(`Installation of dependencies for ${repoName} failed.`);
-        process.exit(1);
-    }
+    const projectNameResponse = await prompt({
+        type: 'input',
+        name: 'projectName',
+        message: 'Project name:',
+    });
+    const projectName = projectNameResponse.projectName;
 
-    console.log(`Project setup for ${repoName} completed successfully.`);
-};
+    console.log(`Scaffolding project in ${process.cwd()}/${projectName}...`);
 
-main();
+    // Create project directory
+    fs.mkdirSync(projectName);
+
+    // Copy template files to project directory
+    const templateDir = path.join(__dirname, '..', 'template');
+    fs.readdirSync(templateDir).forEach((file) => {
+        fs.copyFileSync(path.join(templateDir, file), path.join(projectName, file));
+    });
+
+    console.log('Done. Now run:\n');
+    console.log(`  cd ${projectName}`);
+    console.log('  npm install');
+    console.log('  npm run dev');
+}
+
+scaffoldProject().catch((error) => {
+    console.error('An error occurred:', error);
+});
