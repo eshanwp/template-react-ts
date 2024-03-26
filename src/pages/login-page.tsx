@@ -11,7 +11,7 @@ const LoginPage: FC<ILoginPageProps> = () => {
      * @description
      */
     const sample = () => {
-        const a = 'hello';
+        const a = 'hello'
         console.log(`Hi ${a}`);
     };
 
