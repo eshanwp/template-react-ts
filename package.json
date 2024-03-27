@@ -1,8 +1,8 @@
 {
     "name": "@wpeshan/template-react-ts",
+    "description": "This template provides a minimal setup to get React working in Vite and some ESLint rules.",
     "version": "0.0.7",
     "type": "module",
-    "main": "index.js",
     "bin": {
         "create-react-ts": "./bin/cli.js"
     },
